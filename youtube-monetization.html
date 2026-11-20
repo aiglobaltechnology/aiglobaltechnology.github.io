@@ -52,7 +52,7 @@ header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);background:rg
 .hero{padding:30px 0 6px;text-align:center}
 .hero-visual{position:relative;width:172px;margin:6px auto 4px}
 .hero-visual .frame{border-radius:28px;border:1.5px solid rgba(212,175,55,.55);background:#0c0d41;box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 0 6px rgba(212,175,55,.06);overflow:hidden}
-.hero-visual img{display:block;width:100%;height:auto}
+.hero-visual img,.hero-visual video{display:block;width:100%;height:auto}
 .hero-visual .play{position:absolute;right:-14px;bottom:14px;width:52px;height:52px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(255,0,51,.5);border:3px solid #05080f}
 .hero-visual .play::after{content:"";width:0;height:0;border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
 .kicker{display:inline-flex;align-items:center;gap:7px;margin-top:20px;padding:7px 14px;border-radius:999px;border:1px solid rgba(212,175,55,.45);background:rgba(212,175,55,.08);color:#ffe9a8;font-size:12px;font-weight:700;letter-spacing:2.2px}
@@ -110,8 +110,7 @@ ol.terms li::marker{color:var(--gold2);font-weight:700}
 <div class="wrap">
   <div class="hero fade">
     <div class="hero-visual">
-      <div class="frame"><img src="brand_robot_wave.png" alt="Ai Global Technology brand robot waving hello"></div>
-      <span class="play" aria-hidden="true"></span>
+      <div class="frame"><video src="brand_robot_welcome_wave.mp4" poster="brand_robot_welcome_poster.jpg" autoplay loop muted playsinline></video></div>
     </div>
     <span class="kicker">✦ YOUTUBE MONETIZATION SERVICE</span>
     <h1>YouTube <span class="gold">Monetization</span><br>Service</h1>
