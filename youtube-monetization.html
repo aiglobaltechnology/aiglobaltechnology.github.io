@@ -11,67 +11,93 @@
 <meta property="og:site_name" content="Ai Global Technology">
 <meta property="og:title" content="YouTube Monetization Service — Ai Global Technology">
 <meta property="og:description" content="Channel Link ပို့လိုက်ရုံပဲ — Monetization အခြေအနေ၊ Eligibility နဲ့ AdSense Setup ကို စစ်ဆေးပြီး လမ်းညွှန်ပေးပါမယ်။">
-<meta name="theme-color" content="#070d1a">
+<meta name="theme-color" content="#05080f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#070d1a; --card:rgba(255,255,255,.045); --card2:rgba(255,255,255,.03);
-  --line:rgba(148,197,255,.14); --txt:#eef4ff; --mut:#9db0cf;
-  --cyan:#38e1ff; --blue:#2f8bff; --violet:#8b7bff; --gold:#ffcf5c;
+  --bg:#05080f; --bg2:#0a0f1e;
+  --card:rgba(255,255,255,.04); --card2:rgba(255,255,255,.025);
+  --line:rgba(212,175,55,.22); --line2:rgba(148,197,255,.12);
+  --txt:#f2f5fc; --mut:#a7b4cf;
+  --gold:#d4af37; --gold2:#ffcf5c; --goldsoft:rgba(212,175,55,.14);
+  --red:#ff0033; --cyan:#38e1ff;
+  --gradgold:linear-gradient(92deg,#b8860b,#d4af37 35%,#ffcf5c 60%,#d4af37);
   --grad:linear-gradient(92deg,#19b8dd,#38e1ff 55%,#8b7bff);
-  --gradgold:linear-gradient(92deg,#e8a90c,#ffcf5c);
-  --r:24px;
+  --r:26px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Inter,"Noto Sans Myanmar",-apple-system,sans-serif;color:var(--txt);line-height:1.6;
+body{font-family:Inter,"Noto Sans Myanmar",-apple-system,sans-serif;color:var(--txt);line-height:1.65;
   background:
-    radial-gradient(640px 420px at 88% -60px, rgba(139,123,255,.28), transparent 62%),
-    radial-gradient(720px 520px at -10% 240px, rgba(56,225,255,.16), transparent 60%),
-    radial-gradient(560px 420px at 50% 115%, rgba(255,207,92,.07), transparent 60%),
+    radial-gradient(700px 460px at 85% -80px, rgba(212,175,55,.16), transparent 62%),
+    radial-gradient(760px 540px at -12% 260px, rgba(56,225,255,.10), transparent 60%),
+    radial-gradient(600px 440px at 50% 118%, rgba(255,0,51,.06), transparent 60%),
     var(--bg);
   background-attachment:fixed;-webkit-text-size-adjust:100%}
 a{text-decoration:none;color:inherit}
 h1,h2,h3,.logo{font-family:Poppins,"Noto Sans Myanmar",sans-serif}
 .wrap{max-width:720px;margin:0 auto;padding:0 16px 112px}
-header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);background:rgba(7,13,26,.78);border-bottom:1px solid var(--line)}
+/* gentle fade-up only — no continuous motion (dizzy-safe) */
+.fade{opacity:0;transform:translateY(10px);transition:opacity .9s ease,transform .9s ease}
+.fade.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}}
+header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);background:rgba(5,8,15,.82);border-bottom:1px solid var(--line2)}
 .hbar{max-width:720px;margin:0 auto;padding:11px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .logo{font-weight:700;font-size:17px;letter-spacing:.3px;display:flex;align-items:center;gap:9px}
-.logo .dot{width:34px;height:34px;border-radius:11px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:15px;color:#04222e;font-weight:800}
-.logo em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.bookbtn{background:var(--grad);color:#03222e;font-weight:700;padding:11px 18px;border-radius:999px;font-size:14.5px;min-height:44px;display:inline-flex;align-items:center}
-.hero{padding:26px 0 4px;text-align:center}
-.kicker{display:inline-flex;align-items:center;gap:7px;margin-top:22px;padding:7px 14px;border-radius:999px;border:1px solid rgba(56,225,255,.35);background:rgba(56,225,255,.08);color:#bfeaff;font-size:12.5px;font-weight:600;letter-spacing:1.6px}
-h1{font-size:30px;line-height:1.25;margin:14px 0 2px;font-weight:800;letter-spacing:.2px}
-h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo .dot{width:34px;height:34px;border-radius:11px;background:var(--gradgold);display:flex;align-items:center;justify-content:center;font-size:15px;color:#241a02;font-weight:800}
+.logo em{font-style:normal;background:var(--gradgold);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bookbtn{background:var(--gradgold);color:#241a02;font-weight:700;padding:11px 18px;border-radius:999px;font-size:14.5px;min-height:44px;display:inline-flex;align-items:center;box-shadow:0 8px 24px rgba(212,175,55,.28)}
+.hero{padding:30px 0 6px;text-align:center}
+.hero-visual{position:relative;width:172px;margin:6px auto 4px}
+.hero-visual .frame{border-radius:28px;border:1.5px solid rgba(212,175,55,.55);background:#0c0d41;box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 0 6px rgba(212,175,55,.06);overflow:hidden}
+.hero-visual img{display:block;width:100%;height:auto}
+.hero-visual .play{position:absolute;right:-14px;bottom:14px;width:52px;height:52px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(255,0,51,.5);border:3px solid #05080f}
+.hero-visual .play::after{content:"";width:0;height:0;border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.kicker{display:inline-flex;align-items:center;gap:7px;margin-top:20px;padding:7px 14px;border-radius:999px;border:1px solid rgba(212,175,55,.45);background:rgba(212,175,55,.08);color:#ffe9a8;font-size:12px;font-weight:700;letter-spacing:2.2px}
+h1{font-size:32px;line-height:1.22;margin:14px 0 2px;font-weight:800;letter-spacing:.2px}
+h1 .gold{background:var(--gradgold);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 8s linear infinite}
+@keyframes shimmer{0%{background-position:0% 0}100%{background-position:200% 0}}
 .lede{color:var(--mut);font-size:16px;margin-top:10px}
-section{margin-top:38px}
-.eyebrow{color:var(--cyan);font-size:12px;font-weight:700;letter-spacing:2.6px;margin-bottom:5px}
-h2{font-size:23px;font-weight:700;margin-bottom:4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+.chip{padding:7px 13px;border-radius:999px;border:1px solid var(--line2);background:rgba(255,255,255,.03);color:#d7e2f5;font-size:13px;font-weight:600}
+.chip b{color:var(--gold2)}
+.goldrule{width:64px;height:3px;border-radius:3px;background:var(--gradgold);margin:26px auto 0}
+section{margin-top:40px}
+.eyebrow{color:var(--gold2);font-size:12px;font-weight:700;letter-spacing:2.6px;margin-bottom:5px}
+h2{font-size:24px;font-weight:700;margin-bottom:4px}
 .sub{color:var(--mut);font-size:14.5px;margin-bottom:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;margin-bottom:16px;backdrop-filter:blur(6px);box-shadow:0 16px 40px rgba(0,0,0,.32)}
+.card{background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:22px;margin-bottom:16px;backdrop-filter:blur(6px);box-shadow:0 16px 40px rgba(0,0,0,.32)}
 .card h3{font-size:19px;font-weight:700;margin-bottom:8px}
 .card p{color:var(--mut);font-size:15px}
-.price{color:var(--gold);font-weight:700;font-size:17px;margin:3px 0 9px;font-family:Poppins,sans-serif}
+.price{color:var(--gold2);font-weight:800;font-size:22px;margin:4px 0 10px;font-family:Poppins,sans-serif;letter-spacing:.3px}
+.price small{font-size:13px;color:var(--mut);font-weight:500}
 ul.ticks{list-style:none;margin:12px 0 4px}
-ul.ticks li{padding-left:30px;position:relative;margin-bottom:9px;font-size:15px;color:#dce8f8}
-ul.ticks li::before{content:"✓";position:absolute;left:0;top:1px;width:19px;height:19px;border-radius:6px;background:rgba(56,225,255,.14);color:var(--cyan);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
+ul.ticks li{padding-left:32px;position:relative;margin-bottom:10px;font-size:15px;color:#dce8f8}
+ul.ticks li::before{content:"✓";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:rgba(212,175,55,.16);color:var(--gold2);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid2 .card{margin-bottom:0}
+@media (max-width:560px){.grid2{grid-template-columns:1fr}}
 ol.steps{list-style:none;counter-reset:step;margin:12px 0 4px}
-ol.steps li{counter-increment:step;padding-left:38px;position:relative;margin-bottom:12px;font-size:15px;color:#dce8f8}
-ol.steps li::before{content:counter(step);position:absolute;left:0;top:1px;width:24px;height:24px;border-radius:50%;background:var(--grad);color:#03222e;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800}
+ol.steps li{counter-increment:step;padding-left:44px;position:relative;margin-bottom:14px;font-size:15px;color:#dce8f8}
+ol.steps li::before{content:counter(step);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;background:var(--gradgold);color:#241a02;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;box-shadow:0 4px 14px rgba(212,175,55,.35)}
 ol.terms{margin:12px 0 4px;padding-left:22px}
 ol.terms li{margin-bottom:10px;font-size:15px;color:#dce8f8}
-.warn{background:rgba(255,207,92,.08);border:1px solid rgba(255,207,92,.35);border-radius:var(--r);padding:18px 20px;margin-bottom:16px}
-.warn b{color:var(--gold)}
+ol.terms li::marker{color:var(--gold2);font-weight:700}
+.warn{background:rgba(255,207,92,.07);border:1px solid rgba(212,175,55,.4);border-radius:var(--r);padding:20px 22px;margin-bottom:16px}
+.warn b{color:var(--gold2)}
 .warn p{color:#f3e3b3;font-size:15px}
+/* option cards — Old is the premium pick */
+.opt{position:relative}
+.opt.rec{border:1.5px solid rgba(212,175,55,.65);background:linear-gradient(180deg,rgba(212,175,55,.10),rgba(255,255,255,.03))}
+.badge{position:absolute;top:-13px;right:18px;padding:5px 13px;border-radius:999px;background:var(--gradgold);color:#241a02;font-size:12.5px;font-weight:800;letter-spacing:.4px;box-shadow:0 6px 18px rgba(212,175,55,.4)}
 .cta{display:grid;gap:10px;margin:16px 0 4px}
-.btn{min-height:56px;border-radius:17px;display:flex;align-items:center;justify-content:center;gap:9px;font-size:16.5px;font-weight:700;padding:14px 18px;font-family:Poppins,Inter,sans-serif}
-.btn.primary{background:var(--grad);color:#03222e}
-.btn.ghost{border:1.5px solid rgba(56,225,255,.45);color:var(--cyan);background:rgba(56,225,255,.05)}
+.btn{min-height:58px;border-radius:18px;display:flex;align-items:center;justify-content:center;gap:9px;font-size:16.5px;font-weight:700;padding:14px 18px;font-family:Poppins,Inter,sans-serif}
+.btn.primary{background:var(--gradgold);color:#241a02;box-shadow:0 12px 30px rgba(212,175,55,.32)}
+.btn.ghost{border:1.5px solid rgba(212,175,55,.5);color:var(--gold2);background:rgba(212,175,55,.05)}
 .foot{margin-top:44px;text-align:center;color:var(--mut);font-size:13.5px}
-.foot a{color:var(--cyan)}
+.foot a{color:var(--gold2)}
 </style>
 </head>
 <body>
@@ -82,23 +108,36 @@ ol.terms li{margin-bottom:10px;font-size:15px;color:#dce8f8}
   </div>
 </header>
 <div class="wrap">
-  <div class="hero">
-    <span class="kicker">YOUTUBE MONETIZATION SERVICE</span>
-    <h1>YouTube Monetization <span class="grad">Service</span></h1>
+  <div class="hero fade">
+    <div class="hero-visual">
+      <div class="frame"><img src="brand_robot_wave.png" alt="Ai Global Technology brand robot waving hello"></div>
+      <span class="play" aria-hidden="true"></span>
+    </div>
+    <span class="kicker">✦ YOUTUBE MONETIZATION SERVICE</span>
+    <h1>YouTube <span class="gold">Monetization</span><br>Service</h1>
     <p class="lede">မင်္ဂလာပါခင်ဗျာ 🙏 YouTube Monetization Service အတွက် စုံစမ်းလိုပါက မိမိ၏ YouTube Channel Link ကို ပို့ပေးနိုင်ပါတယ်ခင်ဗျာ။ 📩</p>
+    <div class="chips">
+      <span class="chip"><b>1,000</b> Subs + <b>4,000</b> Watch Hours</span>
+      <span class="chip">Approval က <b>YouTube</b> ဆုံးဖြတ်ချက်</span>
+    </div>
+    <div class="goldrule"></div>
   </div>
 
-  <section>
+  <section class="fade">
     <p class="eyebrow">ကျွန်တော်တို့ဘက်မှ</p>
     <h2>စစ်ဆေးပေးမယ့် အချက်များ</h2>
     <div class="card">
-      <ul class="ticks">
-        <li>Channel Monetization အခြေအနေ</li>
-        <li>လိုအပ်သော Eligibility</li>
-        <li>Content &amp; Policy အခြေအနေ</li>
-        <li>AdSense for YouTube Setup / Linking လမ်းညွှန်</li>
-      </ul>
-      <p>စစ်ဆေးပြီး လိုအပ်သောအချက်များကို ရှင်းပြပေးပါမယ်။ Channel Link ပို့ပေးလိုက်ပါခင်ဗျာ။ လိုအပ်တဲ့အချက်တွေကို ဆက်လက်လမ်းညွှန်ပေးပါမယ်။ 🙏</p>
+      <div class="grid2">
+        <ul class="ticks">
+          <li>Channel Monetization အခြေအနေ</li>
+          <li>လိုအပ်သော Eligibility</li>
+        </ul>
+        <ul class="ticks">
+          <li>Content &amp; Policy အခြေအနေ</li>
+          <li>AdSense for YouTube Setup / Linking လမ်းညွှန်</li>
+        </ul>
+      </div>
+      <p style="margin-top:6px">စစ်ဆေးပြီး လိုအပ်သောအချက်များကို ရှင်းပြပေးပါမယ်။ Channel Link ပို့ပေးလိုက်ပါခင်ဗျာ။ လိုအပ်တဲ့အချက်တွေကို ဆက်လက်လမ်းညွှန်ပေးပါမယ်။ 🙏</p>
     </div>
     <div class="warn">
       <p><b>⚠️ အရေးကြီးသည်</b><br>
@@ -106,21 +145,22 @@ ol.terms li{margin-bottom:10px;font-size:15px;color:#dce8f8}
     </div>
   </section>
 
-  <section>
+  <section class="fade">
     <p class="eyebrow">ဝန်ဆောင်မှု (၂) မျိုး</p>
     <h2>ဘယ်လိုလျှောက်ပေးလဲ</h2>
-    <div class="card">
+    <div class="card opt">
       <h3>၁။ ကိုယ်ပိုင် AdSense ဖြင့် လျှောက်ခြင်း (New Account)</h3>
-      <p class="price">100,000 MMK</p>
+      <p class="price">100,000 <small>MMK</small></p>
       <p>ကိုယ်ပိုင် AdSense account အသစ်ဖွင့်ပြီး ကိုယ့် Channel နဲ့ ချိတ်ဆက်ပေးခြင်း။</p>
       <ul class="ticks">
         <li>AdSense verify အတွက် ဖုန်း၊ ID၊ လိပ်စာ လိုပါတယ် (နိုင်ငံခြား contact လိုအပ်ပါတယ်)</li>
         <li>စောင့်ရတာ ကြာတတ်ပါတယ် — ကိုယ်ပိုင် AdSense ဖြစ်လို့ ကုန်ကျစရိတ် သက်သာပါတယ်</li>
       </ul>
     </div>
-    <div class="card">
+    <div class="card opt rec">
+      <span class="badge">★ အကြံပြုထားသည်</span>
       <h3>၂။ Service Old AdSense ဖြင့် ချိတ်ဆက်ခြင်း (Old Account)</h3>
-      <p class="price">200,000 MMK</p>
+      <p class="price">200,000 <small>MMK</small></p>
       <p>ကိုယ်ပိုင် AdSense မရှိသူများအတွက် Service ရဲ့ AdSense နဲ့ ချိတ်ဆက်ပြီး လျှောက်ပေးခြင်း။</p>
       <ul class="ticks">
         <li>အသင့်သုံး AdSense (ထုတ်ယူနေပြီးသား) — ID၊ လိပ်စာ၊ ဘဏ် verify ပြီးသား</li>
@@ -130,7 +170,7 @@ ol.terms li{margin-bottom:10px;font-size:15px;color:#dce8f8}
     </div>
   </section>
 
-  <section>
+  <section class="fade">
     <p class="eyebrow">လိုအပ်ချက်များ</p>
     <h2>Eligibility</h2>
     <div class="card">
@@ -143,7 +183,7 @@ ol.terms li{margin-bottom:10px;font-size:15px;color:#dce8f8}
     </div>
   </section>
 
-  <section>
+  <section class="fade">
     <p class="eyebrow">လုပ်ငန်းစဉ်</p>
     <h2>အဆင့်ဆင့်</h2>
     <div class="card">
@@ -158,7 +198,7 @@ ol.terms li{margin-bottom:10px;font-size:15px;color:#dce8f8}
     </div>
   </section>
 
-  <section>
+  <section class="fade">
     <p class="eyebrow">ဝန်ဆောင်ခ</p>
     <h2>ဈေးနှုန်းနှင့် ငွေပေးချေမှု</h2>
     <div class="card">
@@ -167,7 +207,7 @@ ol.terms li{margin-bottom:10px;font-size:15px;color:#dce8f8}
     </div>
   </section>
 
-  <section>
+  <section class="fade">
     <p class="eyebrow">စည်းကမ်းချက်များ</p>
     <h2>Terms &amp; Conditions</h2>
     <div class="card">
@@ -183,7 +223,7 @@ ol.terms li{margin-bottom:10px;font-size:15px;color:#dce8f8}
     </div>
   </section>
 
-  <section>
+  <section class="fade">
     <p class="eyebrow">မေးစရာရှိလား</p>
     <h2>Chat Box မှာ မေးနိုင်ပါတယ်</h2>
     <div class="card">
@@ -194,7 +234,7 @@ ol.terms li{margin-bottom:10px;font-size:15px;color:#dce8f8}
     </div>
   </section>
 
-  <section>
+  <section class="fade">
     <div class="cta">
       <a class="btn primary" href="https://m.me/aiglobal.tec">Channel Link ပို့ရန် — Facebook Page CB</a>
       <a class="btn ghost" href="index.html">← Ai Global Technology သို့ ပြန်သွားရန်</a>
@@ -202,5 +242,16 @@ ol.terms li{margin-bottom:10px;font-size:15px;color:#dce8f8}
     <p class="foot">Ai Global Technology · YouTube Monetization Service · 20 Nov 2026</p>
   </section>
 </div>
+<script>
+// gentle fade-up on scroll only — no continuous motion (dizzy-safe)
+(function(){
+  var els=document.querySelectorAll('.fade');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+  },{threshold:.08});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
 </body>
 </html>
