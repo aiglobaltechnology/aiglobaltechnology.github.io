@@ -254,6 +254,17 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
 .work-card small{color:var(--mut);font-size:12.5px}
 .work-card .wp{display:inline-flex;align-items:center;gap:5px;color:var(--cyan);font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:5px}
 .work-card .wp svg{width:13px;height:13px}
+/* mobile: compact tool boxes + see-more curriculum (2026-11-27) */
+.more-toggle,.more-btn{display:none}
+@media (max-width:559px){
+  .tool{flex-wrap:wrap;row-gap:8px}
+  .curr{display:none}
+  .more-toggle:checked + .curr{display:grid}
+  .more-btn{display:block;text-align:center;color:var(--cyan);font-weight:700;font-size:14px;padding:10px 0 2px;cursor:pointer;font-family:Poppins,sans-serif}
+  .more-btn .t-less{display:none}
+  .more-toggle:checked ~ .more-btn .t-more{display:none}
+  .more-toggle:checked ~ .more-btn .t-less{display:inline}
+}
 @media (min-width:560px){.cta{grid-template-columns:1fr 1fr}.stats{gap:12px}h1{font-size:37px}}
 </style>
 </head>
@@ -354,7 +365,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
       </a>
       <div class="tool">
         <span class="ic-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 21 12.5-12.5a2.1 2.1 0 0 0-3-3L3 18v3h3Z"/><path d="m14 6 3 3"/><path d="M5 3v3M3 5h3M19 2v3M17.5 3.5h3"/></svg></span>
-        <div class="tt"><b>YouTube Create</b><small>Google ရဲ့ အခမဲ့ Video Editor App — 16:9 Landscape + Auto Caption အသစ် · iPhone App · Android App</small></div>
+        <div class="tt"><b>YouTube Create</b><small>Google ရဲ့ အခမဲ့ Video Editor App — 16:9 Landscape + Auto Caption အသစ်</small></div>
         <a class="dl" href="https://apps.apple.com/sg/app/youtube-create-video-editor/id6476327393">📱 iPhone App</a>
         <a class="dl" href="https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.producer">🤖 Android App</a>
       </div>
@@ -576,6 +587,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Anyone who wants a practical side-income skill for client work</li>
       </ul>
       <div class="subhead">What you will learn — full curriculum</div>
+      <input type="checkbox" id="more-curr" class="more-toggle">
       <div class="curr">
         <details><summary>Module 0 — Before You Start <span class="wk">START HERE</span></summary><p>What AI video really is, exactly what you need (and checking you already have it), and how to use the course group. Zero experience assumed.</p></details>
         <details><summary>Module 1 — Setting Up Your Apps <span class="wk">WEEK 1</span></summary><p>Create your Google account, install CapCut, get into Google Flow, and organize your phone storage and folders like a creator.</p></details>
@@ -587,6 +599,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
         <details><summary>Module 7 — Publishing Your Videos <span class="wk">WEEK 4</span></summary><p>Posting on TikTok the right way, captions and hashtags that help discovery, and the 3 copyright rules you must never break.</p></details>
         <details><summary>Module 8 — Your First Income <span class="wk">WEEK 4</span></summary><p>3 realistic ways to earn with this skill, how to find your first client, and building your portfolio. Ends with a Final Project that ties everything together.</p></details>
       </div>
+      <label class="more-btn" for="more-curr"><span class="t-more">See full curriculum ▾</span><span class="t-less">Show less ▴</span></label>
       <div class="price">Batch 1 — 45,000 Ks · Limited to 20 students</div>
       <a class="btn gold" href="https://t.me/AGTREMOTECRAFT202"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 10.2 13.8"/><path d="M21 3 14.2 21l-4-7.2L3 9.8 21 3Z"/></svg> Join Batch 1 — Message Me</a>
     </div></div>
