@@ -257,7 +257,9 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
 /* mobile: compact tool boxes + see-more curriculum (2026-11-27) */
 .more-toggle,.more-btn{display:none}
 @media (max-width:559px){
-  .tool{flex-wrap:wrap;row-gap:8px}
+  .tool-dl{flex-wrap:wrap;row-gap:8px}
+  .tool-dl .tt{flex:1 1 calc(100% - 54px)}
+  .tool-dl .dl{flex:1 1 auto;margin:0;text-align:center}
   .curr{display:none}
   .more-toggle:checked + .curr{display:grid}
   .more-btn{display:block;text-align:center;color:var(--cyan);font-weight:700;font-size:14px;padding:10px 0 2px;cursor:pointer;font-family:Poppins,sans-serif}
@@ -363,7 +365,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;text-al
         <div class="tt"><b>Higgsfield AI</b><small>AI Video + Character ထုတ်ရန် — Free plan ရှိ</small></div>
         <span class="go">›</span>
       </a>
-      <div class="tool">
+      <div class="tool tool-dl">
         <span class="ic-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 21 12.5-12.5a2.1 2.1 0 0 0-3-3L3 18v3h3Z"/><path d="m14 6 3 3"/><path d="M5 3v3M3 5h3M19 2v3M17.5 3.5h3"/></svg></span>
         <div class="tt"><b>YouTube Create</b><small>Google ရဲ့ အခမဲ့ Video Editor App — 16:9 Landscape + Auto Caption အသစ်</small></div>
         <a class="dl" href="https://apps.apple.com/sg/app/youtube-create-video-editor/id6476327393">📱 iPhone App</a>
